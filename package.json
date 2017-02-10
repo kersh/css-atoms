@@ -1,0 +1,29 @@
+{
+  "name": "css-atoms",
+  "version": "1.0.0",
+  "description": "A legal way of doing inline css",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kersh/css-atoms.git"
+  },
+  "keywords": [
+    "CSS",
+    "Atoms",
+    "Basscss",
+    "Helpers"
+  ],
+  "author": "Vladimir Shafikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kersh/css-atoms/issues"
+  },
+  "homepage": "https://github.com/kersh/css-atoms#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
