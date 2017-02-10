@@ -1,8 +1,9 @@
 # CSS Atoms
 
+*A legal way of doing inline css*
+
 ---
 
-*A legal way of doing inline css*
 
 ### What is this?
 
