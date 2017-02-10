@@ -1,0 +1,39 @@
+root = true
+
+[*]
+charset = utf-8
+
+
+[*.json]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+
+[*.html]
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+
+[*.less]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+
+[*.styl]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+
+[*.scss]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
