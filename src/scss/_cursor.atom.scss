@@ -1,0 +1,5 @@
+@each $class-name, $cursor in $cursor-list {
+  .cursor#{$cursor-separator}#{$class-name} {
+    cursor: $cursor;
+  }
+}

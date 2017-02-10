@@ -1,0 +1,5 @@
+@each $class-name, $color in $color-list {
+  .color#{$color-separator}#{$class-name} {
+    color: $color;
+  }
+}

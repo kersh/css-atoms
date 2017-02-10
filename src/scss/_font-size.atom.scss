@@ -1,0 +1,5 @@
+@each $class-name, $font-size in $font-size-list {
+  .font-size#{$font-size-separator}#{$class-name} {
+    font-size: $font-size;
+  }
+}

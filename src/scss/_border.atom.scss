@@ -1,0 +1,21 @@
+@each $class-name, $property in $border-list {
+  .border#{$border-separator}#{$class-name} {
+    border: $property;
+  }
+
+  .border-top#{$border-separator}#{$class-name} {
+    border-top: $property;
+  }
+
+  .border-right#{$border-separator}#{$class-name} {
+    border-right: $property;
+  }
+
+  .border-bottom#{$border-separator}#{$class-name} {
+    border-bottom: $property;
+  }
+
+  .border-left#{$border-separator}#{$class-name} {
+    border-left: $property;
+  }
+}

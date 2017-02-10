@@ -1,0 +1,27 @@
+.overflow-x#{$overflow-separator}scroll {
+  overflow-x: scroll;
+}
+
+.overflow-y#{$overflow-separator}scroll {
+  overflow-y: scroll;
+}
+
+.overflow-x#{$overflow-separator}auto {
+  overflow-x: auto;
+}
+
+.overflow-y#{$overflow-separator}auto {
+  overflow-y: auto;
+}
+
+.overflow#{$overflow-separator}scroll {
+  overflow: scroll;
+}
+
+.overflow#{$overflow-separator}auto {
+  overflow: auto;
+}
+
+.overflow#{$overflow-separator}hidden {
+  overflow: hidden;
+}

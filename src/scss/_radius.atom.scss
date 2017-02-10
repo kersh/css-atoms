@@ -1,0 +1,25 @@
+@each $class-name, $radius, $important-flag in $radius-list {
+  .radius#{$radius-separator}#{$class-name} {
+    border-radius: $radius $important-flag;
+  }
+
+  .radius-top#{$radius-separator}#{$class-name} {
+    border-radius: $radius $radius 0 0 $important-flag;
+  }
+
+  .radius-right#{$radius-separator}#{$class-name} {
+    border-radius: 0 $radius $radius 0 $important-flag;
+  }
+
+  .radius-bottom#{$radius-separator}#{$class-name} {
+    border-radius: 0 0 $radius $radius $important-flag;
+  }
+
+  .radius-left#{$radius-separator}#{$class-name} {
+    border-radius: $radius 0 0 $radius $important-flag;
+  }
+}
+
+.radius#{$radius-separator}circle {
+  border-radius: 50%;
+}
