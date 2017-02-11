@@ -139,15 +139,15 @@ You have 2 options:
 
 1. Install all dependencies
 
-`npm install`
+    `npm install`
 
 2. To run in dev mode
 
-`npm start`
+    `npm start`
 
 3. To update dist file
 
-`npm run build`
+    `npm run build`
 
 
 ### Other recommendation
