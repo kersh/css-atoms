@@ -56,6 +56,7 @@ gulp.task('sass:build', () => {
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(rename('css-atoms.css'))
     .pipe(gulp.dest('./dist'));
 });
 
