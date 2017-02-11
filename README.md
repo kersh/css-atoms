@@ -29,7 +29,7 @@ Soon
 Soon
 
 
-### Contribution
+### How to contribute
 
 `npm install`
 
