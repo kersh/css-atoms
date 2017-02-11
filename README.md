@@ -3,7 +3,7 @@ CSS Atoms
 
 *A legal way of doing inline css*
 
-A small library of configurable classes that allows to apply simple css properties using classes.
+A low-level, configurable CSS toolkit.
 
 ---
 
@@ -137,6 +137,23 @@ You have 2 options:
 
 ## How to contribute
 
+1. Install all dependencies
+
 `npm install`
 
+2. To run in dev mode
+
 `npm start`
+
+3. To update dist file
+
+`npm run build`
+
+
+### Other recommendation
+
+- If you have something preprocessor specific, then use one of the preprocessors branches (sass/less/stylus).
+- For each new atom create new branch.
+- Please, try to add new atoms for each preprocessor (sass, less, stylus)
+- Pull request changes and new atoms, never work on master.
+- If you can't fix issue or can't add new atom, then create an issue on github.

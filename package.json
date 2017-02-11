@@ -15,7 +15,11 @@
     "CSS",
     "Atoms",
     "Basscss",
-    "Basic"
+    "Basic",
+    "Low-level CSS",
+    "Sass",
+    "Less",
+    "Stylus"
   ],
   "author": "Vladimir Shafikov <vladimir@shafikov.com> (http://shafikov.com)",
   "license": "MIT",
