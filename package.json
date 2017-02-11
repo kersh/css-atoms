@@ -15,9 +15,9 @@
     "CSS",
     "Atoms",
     "Basscss",
-    "Helpers"
+    "Basic"
   ],
-  "author": "Vladimir Shafikov",
+  "author": "Vladimir Shafikov <vladimir@shafikov.com> (http://shafikov.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kersh/css-atoms/issues"
@@ -30,5 +30,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-stylus": "^2.6.0"
-  }
+  },
+  "main": "gulpfile.js"
 }
