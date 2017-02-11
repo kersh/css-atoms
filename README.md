@@ -4,6 +4,15 @@
 
 ---
 
+### Browser support
+
+Default support is last 2 versions of each browser. However, you can compile atoms yourself and extend browser support.
+
+### Preprocessor support
+
+- Sass
+- Less
+- Stylus
 
 ### What is this?
 
