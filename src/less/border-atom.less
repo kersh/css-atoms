@@ -1,0 +1,57 @@
+.border(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @name: extract(@pair, 1);
+    @width: extract(@pair, 2);
+    @style: extract(@pair, 3);
+    @color: extract(@pair, 4);
+
+    .-get-important-flag();
+    .-get-important-flag() when not (@color = '!important') {
+      @important-flag: e(extract(@pair, 5))
+    }
+    .-get-important-flag() when (@color = '!important') {
+      @important-flag: e(extract(@pair, 4));
+    }
+
+    .-apply-color() when (iscolor(@color)) {
+      border-color: @color;
+    }
+
+    .border@{separator}@{name} {
+      border-width: @width @important-flag;
+      border-style: @style @important-flag;
+      .-apply-color();
+    }
+
+    .border-top@{separator}@{name} {
+      border-top-width: @width @important-flag;
+      border-top-style: @style @important-flag;
+      .-apply-color();
+    }
+
+    .border-right@{separator}@{name} {
+      border-right-width: @width @important-flag;
+      border-right-style: @style @important-flag;
+      .-apply-color();
+    }
+
+    .border-bottom@{separator}@{name} {
+      border-bottom-width: @width @important-flag;
+      border-bottom-style: @style @important-flag;
+      .-apply-color();
+    }
+
+    .border-left@{separator}@{name} {
+      border-left-width: @width @important-flag;
+      border-left-style: @style @important-flag;
+      .-apply-color();
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.border(@border-list, @border-separator);

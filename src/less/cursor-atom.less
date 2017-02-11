@@ -1,0 +1,18 @@
+.cursor(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @key: e(extract(@pair, 1));
+    @value: extract(@pair, 2);
+    @important-flag: e(extract(@pair, 3));
+
+    .cursor@{separator}@{key} {
+      cursor: @value @important-flag;
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.cursor(@cursor-list, @cursor-separator);

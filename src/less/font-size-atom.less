@@ -1,0 +1,18 @@
+.font-size(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @key: extract(@pair, 1);
+    @value: extract(@pair, 2);
+    @important-flag: e(extract(@pair, 3));
+
+    .font-size@{separator}@{key} {
+      font-size: @value @important-flag;
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.font-size(@font-size-list, @font-size-separator);

@@ -1,0 +1,18 @@
+.border-color(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @name: extract(@pair, 1);
+    @color: extract(@pair, 2);
+    @important-flag: e(extract(@pair, 3));
+
+    .border-color@{separator}@{name} {
+      border-color: @color @important-flag;
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.border-color(@border-color-list, @border-color-separator);
