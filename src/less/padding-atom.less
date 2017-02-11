@@ -1,0 +1,44 @@
+.p(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @key: extract(@pair, 1);
+    @value: extract(@pair, 2);
+    @important-flag: e(extract(@pair, 3));
+
+    .p@{separator}@{key} {
+      padding: @value @important-flag;
+    }
+
+    .pt@{separator}@{key} {
+      padding-top: @value @important-flag;
+    }
+
+    .pr@{separator}@{key} {
+      padding-right: @value @important-flag;
+    }
+
+    .pb@{separator}@{key} {
+      padding-bottom: @value @important-flag;
+    }
+
+    .pl@{separator}@{key} {
+      padding-left: @value @important-flag;
+    }
+
+    .py@{separator}@{key} {
+      padding-top: @value @important-flag;
+      padding-bottom: @value @important-flag;
+    }
+
+    .px@{separator}@{key} {
+      padding-left: @value @important-flag;
+      padding-right: @value @important-flag;
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.p(@padding-list, @padding-separator);

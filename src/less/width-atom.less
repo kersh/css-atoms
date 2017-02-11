@@ -1,0 +1,18 @@
+.width(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @class-name: e(extract(@pair, 1));
+    @width: extract(@pair, 2);
+    @important-flag: e(extract(@pair, 3));
+
+    .width@{separator}@{class-name} {
+      width: @width @important-flag;
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.width(@width-list, @width-separator);

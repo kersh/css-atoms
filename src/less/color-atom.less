@@ -1,0 +1,18 @@
+.color(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @key: e(extract(@pair, 1));
+    @value: extract(@pair, 2);
+    @important-flag: e(extract(@pair, 3));
+
+    .color@{separator}@{key} {
+      color: @value @important-flag;
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.color(@color-list, @color-separator);

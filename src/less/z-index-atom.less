@@ -1,0 +1,18 @@
+.z-index(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @key: e(extract(@pair, 1));
+    @value: extract(@pair, 2);
+    @important-flag: e(extract(@pair, 3));
+
+    .z@{separator}@{key} {
+      z-index: @value @important-flag;
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.z-index(@z-index-list, @z-index-separator);

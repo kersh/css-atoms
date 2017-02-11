@@ -1,0 +1,18 @@
+.font-weight(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @name: extract(@pair, 1);
+    @weight: extract(@pair, 2);
+    @important-flag: e(extract(@pair, 3));
+
+    .font-weight@{separator}@{name} {
+      font-weight: @weight @important-flag;
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.font-weight(@font-weight-list, @font-weight-separator);

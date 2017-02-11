@@ -2,39 +2,55 @@ const gulp = require('gulp');
 const gutil = require('gulp-util');
 const sass = require('gulp-sass');
 const stylus = require('gulp-stylus');
+const less = require('gulp-less');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 
+const basePath = './src';
+const devOutput = './dev';
 
 // Sass
 gulp.task('sass', () => {
-  return gulp.src('./src/**/*.scss')
+  return gulp.src(`${basePath}/**/*.scss`)
     .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(rename('styles-sass.css'))
-    .pipe(gulp.dest('./dev'));
+    .pipe(gulp.dest(devOutput));
 });
 
 gulp.task('sass:watch', ['sass'], () => {
-  gulp.watch('./src/**/*.scss', ['sass']);
+  gulp.watch(`${basePath}/**/*.scss`, ['sass']);
 });
 
 
 // Stylus
 gulp.task('stylus', () => {
-  return gulp.src('./src/styles.styl')
+  return gulp.src(`${basePath}/styles.styl`)
     .pipe(stylus().on('error', gutil.log))
     .pipe(rename('styles-stylus.css'))
-    .pipe(gulp.dest('./dev'));
+    .pipe(gulp.dest(devOutput));
 });
 
 gulp.task('stylus:watch', ['stylus'], () => {
-  gulp.watch('./src/**/*.styl', ['stylus']);
+  gulp.watch(`${basePath}/**/*.styl`, ['stylus']);
+});
+
+
+// Less
+gulp.task('less', () => {
+  return gulp.src(`${basePath}/styles.less`)
+    .pipe(less().on('error', gutil.log))
+    .pipe(rename('styles-less.css'))
+    .pipe(gulp.dest(devOutput));
+});
+
+gulp.task('less:watch', ['less'], () => {
+  gulp.watch(`${basePath}/**/*.less`, ['less']);
 });
 
 
 // Build
 gulp.task('sass:build', () => {
-  return gulp.src('./src/**/*.scss')
+  return gulp.src(`${basePath}/**/*.scss`)
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -45,6 +61,6 @@ gulp.task('sass:build', () => {
 
 
 // Tasks
-gulp.task('serve', ['sass:watch', 'stylus:watch']);
+gulp.task('serve', ['sass:watch', 'stylus:watch', 'less:watch']);
 gulp.task('build', ['sass:build']); // use sass version for building dist file
 gulp.task('default', ['serve']);
