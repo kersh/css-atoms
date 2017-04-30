@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/css-atoms.svg)](https://badge.fury.io/js/css-atoms)
+
 CSS Atoms
 =========
 
