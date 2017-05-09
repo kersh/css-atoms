@@ -120,6 +120,7 @@ $text-align-separator: $default-separator;
 // ==================================================
 $text-decoration-separator: $default-separator;
 $text-decoration-list: (
+  'underline': underline,
   'none': none
 );
 
