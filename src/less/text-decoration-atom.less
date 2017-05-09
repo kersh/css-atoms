@@ -1,0 +1,18 @@
+.text-decoration(@list, @separator) {
+  .loop(@index) when (@index > 0) {
+    @pair: extract(@list, @index);
+    @class-name: e(extract(@pair, 1));
+    @width: e(extract(@pair, 2));
+    @important-flag: e(extract(@pair, 3));
+
+    .text-decoration@{separator}@{class-name} {
+      text-decoration: @width @important-flag;
+    }
+
+    .loop(@index - 1);
+  }
+
+  .loop(length(@list));
+}
+
+.text-decoration(@text-decoration-list, @text-decoration-separator);

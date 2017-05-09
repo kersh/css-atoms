@@ -18,7 +18,7 @@ gulp.task('sass', () => {
 });
 
 gulp.task('sass:watch', ['sass'], () => {
-  gulp.watch(`${basePath}/**/*.scss`, ['sass']);
+  gulp.watch(`${basePath}/sass/**/*.scss`, ['sass']);
 });
 
 
@@ -31,7 +31,7 @@ gulp.task('stylus', () => {
 });
 
 gulp.task('stylus:watch', ['stylus'], () => {
-  gulp.watch(`${basePath}/**/*.styl`, ['stylus']);
+  gulp.watch(`${basePath}/stylus/**/*.styl`, ['stylus']);
 });
 
 
@@ -44,7 +44,7 @@ gulp.task('less', () => {
 });
 
 gulp.task('less:watch', ['less'], () => {
-  gulp.watch(`${basePath}/**/*.less`, ['less']);
+  gulp.watch(`${basePath}/less/**/*.less`, ['less']);
 });
 
 

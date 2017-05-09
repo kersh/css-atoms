@@ -1,3 +1,5 @@
-.max-width {
-  max-width: 100%;
+@each $class-name, $max-width in $max-width-list {
+  .max-width#{$max-width-separator}#{$class-name} {
+    max-width: $max-width;
+  }
 }

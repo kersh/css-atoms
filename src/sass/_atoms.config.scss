@@ -131,14 +131,16 @@ $vertical-align-separator: $default-separator;
 // ==================================================
 $width-separator: $default-separator;
 $width-list: (
-  '100': 100%
+  '100': 100%,
+  '50': 50%
 );
 
 // Max-Width
 // ==================================================
 $max-width-separator: $default-separator;
 $max-width-list: (
-  '100': 100%
+  '100': 100%,
+  '50': 50%
 );
 
 // Z Index
