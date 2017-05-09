@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/css-atoms.svg)](https://badge.fury.io/js/css-atoms)
+
 CSS Atoms
 =========
 
@@ -34,38 +36,32 @@ Using atoms are good because:
 * **Easy to override and change.** Atoms have flat structure which allows easily overwrite them.
 
 
-## How to install?
+## How to setup?
 You have 2 options:
 
-1. Use compiled version in HTML.
-
-**In your index.html** 
-```html
-<link rel="stylesheet" href="../node_modules/css-atoms/dist/css-atoms.css">
-```
-
-2. Compile yourself (recommended). This option allow you to configure and extend atoms.
+### Compile yourself (recommended)
+_(Allows to configure and extend atoms)_
 
 **Sass (in your styles.scss)**
 ```scss
 // use original
-@import '<path-to-node_modules-folder>/css-atoms/src/sass/atoms.config.scss';
+@import '<path-to-node_modules-folder>/css-atoms/src/sass/atoms.config';
 
 // or create your config
-@import '<path-to-your-config-file>/atoms.config.scss';
+@import '<path-to-your-config-file>/atoms.config';
 
-@import '<path-to-node_modules-folder>/css-atoms/src/sass/atoms.scss';
+@import '<path-to-node_modules-folder>/css-atoms/src/sass/atoms';
 ```
 
 **Less (in your styles.less)**
 ```less
 // use original
-@import '<path-to-node_modules-folder>/css-atoms/src/less/atoms-config.scss';
+@import '<path-to-node_modules-folder>/css-atoms/src/less/atoms-config';
 
 // or create your config
-@import '<path-to-your-config-file>/atoms-config.scss';
+@import '<path-to-your-config-file>/atoms-config';
 
-@import '<path-to-node_modules-folder>/css-atoms/src/less/atoms.scss';
+@import '<path-to-node_modules-folder>/css-atoms/src/less/atoms';
 ```
 
 **Stylus (in your styles.styl)**
@@ -77,6 +73,14 @@ You have 2 options:
 @import '<path-to-your-config-file>/atoms.config.styl';
 
 @import '<path-to-node_modules-folder>/css-atoms/src/stylus/atoms.styl';
+```
+
+### Use compiled version in HTML
+_(When not using any preprocessor)_
+
+**In your index.html** 
+```html
+<link rel="stylesheet" href="../node_modules/css-atoms/dist/css-atoms.css">
 ```
 
 ## How to use?
