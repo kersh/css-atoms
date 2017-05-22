@@ -1,6 +1,6 @@
 {
   "name": "css-atoms",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A legal way of doing inline css",
   "scripts": {
     "start": "./node_modules/gulp/bin/gulp.js serve",
